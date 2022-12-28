@@ -1,26 +1,30 @@
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
-//        Person1 person1 = new Person1();
-//        Person2 person2= new Person2();
-//        person1.giveRewards(500);
-//        person2.giveRewards("500");
-        Box<String> boxItem = new Box<>();
-        boxItem.setItem("Hello");
-        System.out.println(boxItem.getItem());
-        Box<Integer> boxitem2=new Box<>();
-        boxitem2.setItem(100);
-//        person1.name("George");
-//        person1.attack("Shurkin");
-//        person2.name("Jhon");
-//        person2.attack("Gun");
-//        printPerson(person1);
-//        printPerson(person2);
-//        Ninja ninja = new Person1();
-//        printPerson(ninja);
-//        ninja = new Person2();
-//        printPerson(ninja);
+        Box<String> stringBox= new Box<>();
+        stringBox.setItem("Yellow box");
+        System.out.println(stringBox.getItem());
+        Box <Integer> integerBox=new Box<>();
+        integerBox.setItem(1);
+        System.out.println(integerBox.getItem()); //1
+
+        ArrayList<Integer> myNum= new ArrayList<>(10);
+        for(int i=0; i<10;i++){
+            myNum.add(i);
+        }
+
+        System.out.println(getMiddleArrayListElement(myNum));
+
+        String [] myCars={"BMW","MAZDA","KIA","FORD","TOYOTA","NISSAN"};
+
+        System.out.println(Main.<String>getMiddleEelementOfArray(myCars));
+
     }
-    public static void printPerson(Ninja p){
-        System.out.println(p.masterName());
+    public static <T> T getMiddleArrayListElement(ArrayList<T> array){
+        return array.get(array.size() / 2);
+    }
+
+    public static <T> T getMiddleEelementOfArray(T [] array){
+        return array[array.length/2];
     }
 }
