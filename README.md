@@ -13,7 +13,7 @@ It's important to note that LinkedLists are not as efficient as arrays when it c
 because they only require updating the references in the nodes at the beginning or end of the list.
 
 
-``java
+``
 
 import java.util.LinkedList;
 
