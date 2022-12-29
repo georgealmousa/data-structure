@@ -1,26 +1,34 @@
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
-//        Person1 person1 = new Person1();
-//        Person2 person2= new Person2();
-//        person1.giveRewards(500);
-//        person2.giveRewards("500");
-        Box<String> boxItem = new Box<>();
-        boxItem.setItem("Hello");
-        System.out.println(boxItem.getItem());
-        Box<Integer> boxitem2=new Box<>();
-        boxitem2.setItem(100);
-//        person1.name("George");
-//        person1.attack("Shurkin");
-//        person2.name("Jhon");
-//        person2.attack("Gun");
-//        printPerson(person1);
-//        printPerson(person2);
-//        Ninja ninja = new Person1();
-//        printPerson(ninja);
-//        ninja = new Person2();
-//        printPerson(ninja);
+        LinkedList<String> list = new LinkedList<>();
+        list.add("apple");
+        list.add("banana");
+        list.add("orange");
+        System.out.println(list); // [apple, banana, orange]
+        list.addFirst("strawberry");
+        list.removeLast();
+        System.out.println(list); //[strawberry, apple, banana]
+        list.addLast("blueberry");
+        list.removeFirst();
+        System.out.println(list);  // [apple, banana, blueberry]
+
+        System.out.println(list.getFirst()); //apple
+        System.out.println(list.getLast()); // blueberry
+        System.out.println(list.get(0));//apple
+        System.out.println(list.get(1)); //banana
+        System.out.println(list.get(2));// blueberry
+        System.out.println(list.set(1,"orange"));// [apple, orange, blueberry]
+        boolean isThere= list.contains("banana"); //false
+        list.remove(2); //[apple, orange]
+        for(String s : list){
+            System.out.println(s); // to loop through linked list
+        }
+
+
+
     }
-    public static void printPerson(Ninja p){
-        System.out.println(p.masterName());
-    }
+
 }
+
