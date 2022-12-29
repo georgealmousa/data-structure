@@ -1,0 +1,23 @@
+Index: Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.util.ArrayList;\n\npublic class Main {\n    public static void main(String[] args) {\n//        ArrayList<E> list = new ArrayList<>();\n        ArrayList<String> names = new ArrayList<>();\n        names.add(\"Alice\");\n        names.add(\"George\");\n        names.add(\"Ali\");\n        // to get the size of the list\n        int size=names.size(); //3\n        System.out.println(size);\n        String name=names.get(0);\n        System.out.println(name);//alice\n        names.remove(0);\n        System.out.println(names.size()); // 2\n        ArrayList<Integer> myNum = new ArrayList<>(10);\n\n        for (int i=0 ; i < 100 ; i++){\n            // here we added new elements on the arrayList\n            myNum.add(i);\n        }\n\n        for (int myNums: myNum){\n            System.out.println(myNums);\n        }\n        // now lets find the size of the arraylist\n\n        System.out.println(myNum.size()); //100\n        myNum.remove(0); // remove one\n        System.out.println(myNum.size()); // 99\n        System.out.println(myNum.isEmpty());\n\n\n    }\n    public static void printPerson(Ninja p){\n        System.out.println(p.masterName());\n    }\n}\n\n/*\nYes, the basic concept of an ArrayList is that it is a resizable array of objects that you can use to store and manage a collection of items. Here are some additional things you might want to know about ArrayLists:\n\nArrayLists are generic, which means you can specify the type of elements they contain. For example, you might create an ArrayList of Strings, an ArrayList of integers, or an ArrayList of custom objects.\n\nArrayLists are part of the Java Collections Framework, which provides a set of interfaces and classes for storing and manipulating collections of objects. Other classes in the Collections Framework include lists, sets, queues, and maps.\n\nArrayLists are not the only type of list in Java. Other types of lists include LinkedLists, which are efficient for inserting and deleting elements at arbitrary positions in the list, and Vector lists, which are thread-safe but may have slower performance than ArrayLists.\n\nArrayLists have several methods that you can use to manipulate the elements in the list. Some examples include add, remove, get, set, clear, and isEmpty. You can find a full list of the methods available in the ArrayList class in the Java API documentation.\n\n*/\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Main.java b/Main.java
+--- a/Main.java	
++++ b/Main.java	
+@@ -20,12 +20,10 @@
+             // here we added new elements on the arrayList
+             myNum.add(i);
+         }
+-
+         for (int myNums: myNum){
+             System.out.println(myNums);
+         }
+         // now lets find the size of the arraylist
+-
+         System.out.println(myNum.size()); //100
+         myNum.remove(0); // remove one
+         System.out.println(myNum.size()); // 99
