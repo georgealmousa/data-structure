@@ -1,27 +1,24 @@
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Main {
     public static void main(String[] args) {
-        // stacks works as LIFO ( Last In First Out)
-        Stack<Integer> stack = new Stack<>();
-        // add elements to the stack
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        System.out.println(stack); //[1, 2, 3, 4]
-        stack.pop();
-        System.out.println(stack); // [1, 2, 3]
-
-        // check if the stack is empty or not
-        boolean isEmpty=stack.isEmpty();
-        System.out.println(isEmpty);// false
-        // get the last or top element of the stack
-        int top= stack.peek();
-        System.out.println(top); //3
-        System.out.println(stack.lastElement()); //3
-        // to clear the stack you can use clear method
-        stack.clear();
-        System.out.println(stack); //[]
+        System.out.println("***Queue Explained branch***");
+        // queue is a collection of entires that stored and retrieved according FIFO principle (First In Last Out)
+        // means that the first element added will be also removed
+        Queue<String> queue = new LinkedList<>();
+        queue.add("George");
+        queue.add("Jhon");
+        queue.add("Ali");
+        queue.add("Jim");
+        System.out.println("The element of the queue is "+queue); //The element of the queue is [George, Jhon, Ali, Jim]
+        queue.remove();
+        System.out.println(queue);//[Jhon, Ali, Jim]
+        System.out.println(queue.peek()); //Jhon
+        System.out.println(queue.element()); //Jhon
+        System.out.println(queue.add("Zaid"));
+        System.out.println(queue); //[Jhon, Ali, Jim, Zaid]
+        queue.remove();
+        System.out.println(queue); //[Ali, Jim, Zaid]
     }
 }
